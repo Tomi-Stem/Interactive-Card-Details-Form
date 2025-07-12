@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <div class="card">
+    <div class="cardFront">
+      <img src="images/bg-card-front.png" alt="">
+       <div class="cardFront-details">
+          <img id="card-logo" src="images/card-logo.svg" alt="">
+          <p id="cardNo-o" data-default="0000 0000 0000 0000">0000 0000 0000 0000</p>
+          <div class="name">
+          <span id="name-o" data-default="Jane Appleseed">Jane Appleseed</span>
+          <div>
+            <span id="mm-o" data-default="00">00</span>
+            <span>/</span>
+            <span id="yy-o" data-default="00">00</span>
+          </div>
+        </div>
+       </div>
+    </div>
+
+    <div class="cardBack">
+      <img src="images/bg-card-back.png" alt="">
+      <div class="cardBack-details">
+        <span id="cvc-o" data-default="000">000</span>
+      </div>    
+    </div>
+
+  </div>
+
+  <form action="" class="card-form">
+    <label for="name-i">
+      <h5>Cardholder Name</h5>
+      <input type="text" name="" id="name-i" class="forms" placeholder="e.g. Jane Appleseed">
+      <p class="error-msg">Can't be blank</p>
+    </label>
+
+    <label for="cardNo-i">
+      <h5>Card Number</h5>
+      <input type="text" name="" id="cardNo-i" class="forms" placeholder="e.g. 1234 5678 9123 0000">
+      <p class="error-msg">Wrong format, numbers only</p>
+    </label>
+
+    <div class="formButtom">
+      <label id="mmyy">
+        <h5>Exp. Date (MM/YY)</h5>
+        <input type="number" name="" id="mm-i" class="forms" placeholder="MM">
+        <input type="number" name="" id="yy-i" class="forms" placeholder="YY">
+        <p class="error-msg">Can't be blank</p>
+      </label>
+      
+      <label for="cvc-i">
+        <h5>CVC</h5>
+        <input type="number" name="" id="cvc-i" class="forms" placeholder="e.g. 123">
+        <p class="error-msg">Can't be blank</p>
+      </label>
+    </div>  
+
+    <button class="form-button">Confirm</button>
+  </form>
+
+  <div class="completed">
+    <img src="images/icon-complete.svg" alt="">
+    <h3>THANK YOU!</h3>
+    <p>We've added your card details</p>
+    <button class="contd-btn">Continue</button>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Tomi-Stem" target="_blank">Ampitan Tomi(Stem)</a>.
+    </p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

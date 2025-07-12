@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 28.125rem 50rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5;
+    font-style: normal;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0 0 8.125rem;
+    color: white;
+}
+
+.cardFront, 
+.cardBack {
+    width: 28.125rem; 
+    height: 14.375rem;
+}
+
+.cardFront { 
+    margin: 0 0 3.75rem 0;
+}
+
+.cardBack {
+    margin: 0 0 0 5.625rem;
+}
+
+.cardFront-details {
+    position: relative;
+    width: 24.5rem;
+    top: -6.875rem;
+    left: 1.875rem;
+    justify-content: space-between;
+}
+
+#card-logo {
+    position: absolute;
+    top: -6.25rem;
+    left: 0.75rem;
+    width: 4.375rem;
+    height: 2.5rem;
+}
+
+.cardFront-details p {
+    font-size: 1.625rem;
+    letter-spacing: 0.125rem;    
+    margin-bottom: 1.25rem;
+    text-align: left;
+    margin-left: 0.9375rem;
+}
+
+.name {
+    width: 22.8125rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    letter-spacing: 0.125rem;
+}
+
+#mm-o {
+    margin-right: -0.3125rem;
+}
+
+#yy-o {
+    margin-left: -0.3125rem;
+}
+
+.cardBack-details {
+    position: relative;
+    top: -8.6875rem;
+    left: 22.5rem;
+    width: 2.5rem;
+    letter-spacing: 0.125rem;
+}
+
+.cardBack-details input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    letter-spacing: 0.125rem;
+    border: none;
+    background-color: hsl(270, 3%, 71%);
+    color: hsl(3, 86%, 40%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form {
+    position: absolute;
+    top: 9.375rem;
+    left: 53.125rem;
+}
+
+form p {
+    font-size: 0.6875rem;
+    color: hsl(0, 100%, 66%);
+    margin-top: -0.75rem;
+    margin-bottom: 1.0625rem;
+    display: none;
+}
+
+form input {
+    width: 23.125rem;
+    height: 2.5rem;
+    margin-top: 0.4375rem;
+    margin-bottom: 0.9375rem; 
+    padding-left: 0.625rem; 
+    border-radius: 0.375rem;
+    border: 0.125rem solid hsl(270, 3%, 87%);
+}
+
+.formButtom {
+    display: flex;
+    justify-content: space-between;
+}
+
+#mmyy h6 {
+    letter-spacing: 0.0625rem;
+}
+
+#mmyy input {
+    width: 3.4375rem;
+    margin-right: 0.3125rem;
+}
+
+#mm-i, #yy-i {
+    width: 3.4375rem;
+    margin-right: 0.3125rem;
+}
+
+.formButtom input {
+    width: 12.5rem;
+}
+
+button {
+    width: 23.125rem;
+    height: 3.4375rem;
+    font-size: 1rem;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    border-radius: 0.375rem;
+    border: 0.125rem solid hsl(270, 3%, 87%);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.completed {
+    position: absolute;
+    height: 15.625rem;
+    top: 12.5rem;
+    left: 53.125rem;
+    letter-spacing: 0.0625rem;
+    text-align: center;
+    display: none;
+}
+
+.completed img {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-bottom: 1.875rem;
+}
+
+.completed p {
+    font-size: 0.8125rem;
+    margin: 0.9375rem 0 1.875rem 0;
+}
+
+.completed button {
+    width: 22.5rem;
+    height: 3.3125rem;
+}
+
+footer {
+    margin-top: 1.875rem;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+/* MOBILE DESIGN FOR MAX-WIDTH: 425PX */
+@media screen and (max-width: 425px) {
+
+    body {
+        background-image: url("images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: 28.125rem 17.5rem;
+    }
+
+    .card {
+        flex-direction: column;
+        margin-left: 0;
+        height: 18.75rem;
+    }
+
+    .card img {
+        width: 20rem;
+        height: 10.9375rem;
+    }
+
+    .cardFront {
+        order: 2;
+        margin-left: 0;
+        position: relative;
+        top: -5.6875rem; 
+        left: 1.25rem;
+        width: 21.875rem;
+        height: 11.875rem;
+    }
+
+    #card-logo {
+        top: -4.375rem; 
+        left: 0;
+        width: 3.4375rem;
+        height: 1.875rem;
+    }
+
+    .cardBack {
+        margin: 0 0 0 5.3125rem;
+        order: 1;
+        width: 21.25rem;
+        height: 11.875rem;
+    }
+
+    .cardFront-details {
+        position: relative;
+        width: 18.75rem;
+        top: -5.625rem; 
+        left: 1.875rem;
+        justify-content: space-between;
+    }
+
+    .cardFront-details p {
+        font-size: 1.0625rem;
+        letter-spacing: 0.125rem;
+        margin: 0 0 0.9375rem 0;
+        text-align: left;
+    }
+
+    .name {
+        width: 16.25rem;
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    .cardBack-details {
+        top: -6.5625rem; 
+        left: 15.9375rem;
+    }
+
+    .cardBack-details span {
+        font-size: 0.6875rem;
+    }
+
+    form {
+        width: 23.125rem;
+        position: static;
+        margin: 0.625rem 0 0 1.875rem;
+    }
+
+    button {
+        margin-top: 0.625rem;
+        margin-right: 0.125rem;
+    }
+
+    .completed {
+        position: static;
+    }
+}
