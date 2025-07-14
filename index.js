@@ -26,15 +26,15 @@ const validate = (e) => {
     forms[0].style.borderColor = "hsl(278, 68%, 11%)";
   }
 
-if (forms[1].value < 1 || /\D/.test(forms[1].value)) {
-  // Show error if the field is less than 1 OR contains non-number characters
-  errorMsg[1].style.display = "block";
-  forms[1].style.borderColor = "hsl(0, 100%, 66%)";
-} else {
-  // If input is valid
-  errorMsg[1].style.display = "none";
-  forms[1].style.borderColor = "hsl(278, 68%, 11%)";
-}
+  if (forms[1].value < 1 || /[^0-9\s]/.test(forms[1].value)) {
+    // Show error if the field is less than 1 OR contains non-number characters
+    errorMsg[1].style.display = "block";
+    forms[1].style.borderColor = "hsl(0, 100%, 66%)";
+  } else {
+    // If input is valid
+    errorMsg[1].style.display = "none";
+    forms[1].style.borderColor = "hsl(278, 68%, 11%)";
+  }
 
   let hasError = false;
 
@@ -56,15 +56,7 @@ if (forms[1].value < 1 || /\D/.test(forms[1].value)) {
   } else {
     errorMsg[3].style.display = "none";
     forms[4].style.borderColor = "hsl(278, 68%, 11%)";
-  }
-
-  cardInput.addEventListener('input', () => {
-
-    if (cardInput.value.length > 19) {
-    cardInput.value = cardInput.value.slice(0, 19);
-  }
-
-})}
+  }};
 
 nameInput.addEventListener('input', () => {
   if (nameInput.value.length > 27) {
@@ -74,10 +66,13 @@ nameInput.addEventListener('input', () => {
 
 cardInput.addEventListener('input', () => {
 
-    if (cardInput.value.length > 19) {
-    cardInput.value = cardInput.value.slice(0, 19);
+  if (cardInput.value.length > 19) {
+  cardInput.value = cardInput.value.slice(0, 19);
   }
-
+  
+  let value = cardInput.value.replace(/\s/g, ''); // Remove existing spaces
+  value = value.replace(/(.{4})/g, '$1 ').trim(); // Add space every 4 digits
+  cardInput.value = value;
 });
 
 mmInput.addEventListener('input', () => {
